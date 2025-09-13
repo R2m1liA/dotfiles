@@ -68,6 +68,13 @@ return {
 
 			-- (Default) Only show the documentation popup when manually triggered
 			completion = {
+        accept = { auto_brackets = { enabled = true } },
+        list = { selection = { preselect = true, auto_insert = false } },
+        menu = {
+          draw = {
+            columns = { { "label", "label_description", gap = 1 }, { "kind_icon", "kind", gap = 1 } },
+          },
+        },
 				documentation = { auto_show = false },
 			},
 
@@ -85,5 +92,5 @@ return {
 			fuzzy = { implementation = "prefer_rust_with_warning" },
 		},
 		opts_extend = { "sources.default" },
-	}
+	},
 }
