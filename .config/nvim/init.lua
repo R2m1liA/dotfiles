@@ -1,4 +1,5 @@
 require("config.options")
+require("config.lsp")
 
 require("config.lazy")
 
@@ -6,7 +7,9 @@ require("config.lazy")
 require("lazy").setup({
   spec = {
     -- import your plugins
-    { import = "plugins.theme" },
+    { { import = "plugins.theme" },
+      { import = "plugins.treesitter" },
+      { import = "plugins.lsp" }, },
   },
   -- Configure any other settings here. See the documentation for more details.
   -- colorscheme that will be used when installing plugins.
