@@ -89,13 +89,17 @@ return {
 		-- Default list of enabled providers defined so that you can extend it
 		-- elsewhere in your config, without redefining it, due to `opts_extend`
 		sources = {
-			default = { "lazydev", "lsp", "path", "snippets", "buffer" },
+			default = { "lazydev", "i18n", "lsp", "path", "snippets", "buffer" },
 			providers = {
 				lazydev = {
 					name = "LazyDev",
 					module = "lazydev.integrations.blink",
 					-- make lazydev compeletions top priority
 					score_offset = 100,
+				},
+				i18n = {
+					name = "i18n",
+					module = "i18n.integration.blink_source",
 				},
 			},
 		},

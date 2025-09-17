@@ -3,6 +3,9 @@ local lsp = vim.lsp
 -- Enable LSP
 lsp.enable("lua_ls")
 lsp.enable("clangd")
+lsp.enable("vtsls")
+lsp.enable("vue_ls")
+lsp.enable("eslint")
 
 -- Enable diagnostic
 vim.diagnostic.config({
