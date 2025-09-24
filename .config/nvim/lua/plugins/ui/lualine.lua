@@ -4,8 +4,17 @@ return {
 		dependencies = { "nvim-tree/nvim-web-devicons" },
 		opts = {
 			options = {
+				theme = "catppuccin",
 				component_separators = { left = "|", right = "|" },
 				section_separators = { left = "", right = "" },
+				disabled_filetypes = {
+					statusline = {
+						"dashboard",
+						"alpha",
+						"ministarter",
+						"snacks_dashboard",
+					},
+				},
 			},
 			sections = {
 				lualine_c = { "filename", "os.date('%H:%M')" },

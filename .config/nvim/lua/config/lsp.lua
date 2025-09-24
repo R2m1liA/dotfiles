@@ -6,6 +6,7 @@ lsp.enable("clangd")
 lsp.enable("vtsls")
 lsp.enable("vue_ls")
 lsp.enable("eslint")
+lsp.enable("unocss")
 
 -- Enable diagnostic
 vim.diagnostic.config({

@@ -12,7 +12,7 @@ return {
 			transparent = true,
 			solid = false,
 		},
-		-- auto_integrations = true,
+		auto_integrations = true,
 		custom_highlights = function(colors)
 			return {
 				CursorLineNr = { fg = colors.rosewater },
