@@ -41,9 +41,24 @@ return {
               return node:type()
             end
 
+            local function in_list(value, list)
+              for _, v in ipairs(list) do
+                if v == value then
+                  return true
+                end
+              end
+              return false
+            end
+
+            local allowed_nodes = {
+              "attribute_name",  -- 属性
+              "directive_name",  -- 指令属性
+              "directive_value", -- 指令属性
+            }
+
             local node = get_node_type_before_cursor()
             if not node then return false end
-            if (node == "attribute_name") then
+            if in_list(node, allowed_nodes) then
               return true
             else
               return false
