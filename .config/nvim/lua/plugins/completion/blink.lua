@@ -89,7 +89,7 @@ return {
     -- Default list of enabled providers defined so that you can extend it
     -- elsewhere in your config, without redefining it, due to `opts_extend`
     sources = {
-      default = { "lazydev", "i18n", "lsp", "path", "snippets", "buffer" },
+      default = { "lazydev", "i18n", "lsp", "path", "snippets", "buffer", "copilot" },
       providers = {
         lazydev = {
           name = "LazyDev",
@@ -101,6 +101,12 @@ return {
           name = "i18n",
           module = "i18n.integration.blink_source",
         },
+        copilot = {
+          name = "copilot",
+          module = "blink-cmp-copilot",
+          score_offset = 100,
+          async = true,
+        }
       },
     },
 
