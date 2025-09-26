@@ -1,16 +1,16 @@
 return {
-	cmd = { "lua-language-server" },
-	filetypes = { "lua" },
-	root_markers = {
-		".luarc.json",
-		".luarc.jsonc",
-		".luacheckrc",
-		".stylua.toml",
-		"stylua.toml",
-		"selene.toml",
-		"selene.yml",
-		".git",
-	},
+  cmd = { "lua-language-server" },
+  filetypes = { "lua" },
+  root_markers = {
+    ".luarc.json",
+    ".luarc.jsonc",
+    ".luacheckrc",
+    ".stylua.toml",
+    "stylua.toml",
+    "selene.toml",
+    "selene.yml",
+    ".git",
+  },
   settings = {
     Lua = {
       disgnostic = {
@@ -19,9 +19,9 @@ return {
       workspace = {
         library = {
           vim.fn.stdpath("config"), -- load config folder
-          vim.env.VIMRUNTIME, -- load neivim runtime
+          vim.env.VIMRUNTIME,       -- load neivim runtime
         },
-        checkThirdParty = false, -- disable third party check
+        checkThirdParty = false,    -- disable third party check
       },
     }
   },
