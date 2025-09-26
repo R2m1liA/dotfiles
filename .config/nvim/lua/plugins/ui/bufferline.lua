@@ -35,7 +35,7 @@ return {
     },
   },
   config = function(_, opts)
-    local theme = require("catppuccin.groups.integrations.bufferline").get_theme()
+    local theme = require("catppuccin.special.bufferline").get_theme()
     opts.highlights = theme
     require("bufferline").setup(opts)
     -- Fix bufferline when restoring a session
