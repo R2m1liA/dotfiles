@@ -1,16 +1,3 @@
-local lsp = vim.lsp
-
--- Enable LSP
-lsp.enable("lua_ls")
-lsp.enable("clangd")
-lsp.enable("vtsls")
-lsp.enable("vue_ls")
-lsp.enable("eslint")
-lsp.enable("unocss")
-
-lsp.enable("svelte")
-lsp.enable("tailwindcss")
-
 -- Enable diagnostic
 vim.diagnostic.config({
   virtual_text = {
