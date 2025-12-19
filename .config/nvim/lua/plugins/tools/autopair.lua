@@ -17,7 +17,7 @@ return {
     npairs.setup(opts)
 
     npairs.add_rules({
-      Rule("=", "\"\"", { "html", "vue", "javascriptreact", "typescriptreact" })
+      Rule("=", "\"\"", { "html", "vue", "javascriptreact", "typescriptreact", "svelte" })
           :with_pair(function()
             -- 获取前一个字符的node类型
             local function get_node_type_before_cursor()
